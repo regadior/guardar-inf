@@ -24,20 +24,20 @@
 					<button type="button" class="botones" onclick="register()">registrarse</button>
 				</div>
 				<!-- CONTENIDO LOGIN -->
-				<form id="login" class="login-register">
+				<form id="login" class="login-register" method="post" action="./php/usuario/processLogin.php">
 					<input type="text" class="input-texto" placeholder="Nombre Usuario / E-mail" required>
 					<input type="password" class="input-texto" placeholder="Introduce Contraseña" autocomplete="new-password" required>
 					<input type="checkbox" class="check-box"><span>Recordar Contraseña</span>
 					<button type="submit" class="submit-boton">INICIAR SESIÓN</button>
 				</form>
 				<!-- CONTENIDO REGISTER -->
-				<form id="register" class="login-register">
-					<input type="text" class="input-texto" placeholder="Nombre Usuario" required>
-					<input type="email" class="input-texto" placeholder="Introduce E-mail" required>
-					<input type="password" class="input-texto" placeholder="Introduce Contraseña" autocomplete="new-password" required>
-					<input type="password" class="input-texto" placeholder="Confirma Contraseña" required>
+				<form id="register" class="login-register" method="post" action="./php/usuario/processRegister.php">
+					<input type="text" class="input-texto" name="username" placeholder="Nombre Usuario" required>
+					<input type="email" class="input-texto" name="email" placeholder="Introduce E-mail" required>
+					<input type="password" class="input-texto" name="pass1" placeholder="Introduce Contraseña" autocomplete="new-password" required>
+					<input type="password" class="input-texto" name="pass2" placeholder="Confirma Contraseña" required>
 					<!-- <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span> -->
-					<button type="submit" class="submit-boton">Register</button>
+					<button type="submit" class="submit-boton" name="register">Register</button>
 				</form>
 			</div>
 		</div>
